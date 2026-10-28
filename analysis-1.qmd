@@ -1,7 +1,19 @@
 ---
-title:  “Analysis 1"
-Author: Eliza
+title: "A Beautiful Graphic"
+author: "Eliza"
 format: html
+execute:
+  echo: false
 ---
 
 Eliza is a data maestro!
+
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
+  geom_point()
+```
